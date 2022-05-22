@@ -5,7 +5,10 @@ submitDOM = document.querySelector('#btn'),
 randomizeDOM = document.querySelector('#btn2'),
 totalIngredients = 0,
 outputRandomizerDOM = document.getElementById('output')
-const totalIngredientsArr = []
+const 
+totalIngredientsArr = [],
+errorDivDOM = document.getElementById('error')
+
 
 submitDOM.addEventListener('click', addIngreidentToDom)
 randomizeDOM.addEventListener('click', randomizeFunc)
@@ -16,12 +19,10 @@ if(totalIngredients<=24){
     if(ingredient){
         addFunc(ingredient)
     }else{
-        console.log('error')
-        // change
+        errorMsg(`PLEASE ENTER AN INGREDIENT!`, 'lightpink', 'red')
     }
 }else{
-    console.log('error')
-    // change
+    errorMsg(`MAXED OUT OF POSSIBLE INGRIDENTS!`, 'lightpink', 'red')
 }
 }
 
@@ -38,8 +39,7 @@ function randomizeFunc(){
     if(totalIngredientsArr.length > 2){
         randomizeOutput()
     }else{
-        console.log('error')
-        // change
+        errorMsg(`MUST ENTER AT LEAST 3 INGREDIENTS!`, 'lightpink', 'red')
     }
 }
 
@@ -59,3 +59,19 @@ function randomize(ingredientArr){
     return ingredientArr[Math.floor(Math.random()*ingredientArr.length)]
 }
 
+function errorMsg(msg,bckColor,color){
+    submitDOM.disabled = true
+    randomizeDOM.disabled = true
+    errorDivDOM.textContent = msg
+    errorDivDOM.style.backgroundColor = bckColor
+    errorDivDOM.style.color = color
+    setTimeout(clearErrorMsg, 3000)
+}
+
+function clearErrorMsg(){
+    submitDOM.disabled = false
+    randomizeDOM.disabled = false
+    errorDivDOM.textContent = ''
+    errorDivDOM.style.backgroundColor = none
+    errorDivDOM.style.color = none
+}

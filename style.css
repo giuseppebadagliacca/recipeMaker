@@ -2,49 +2,46 @@
 
 section{
     background: #E04D01;
-    padding: 30px 0;
+    padding: 1.875rem 0;
     color: #251D3A;
     font-weight: bold;
     font-family: 'Koulen', cursive;
     font-size: 1.2rem;
-    height: 50vh;
+    height: 50%;
 }
 #con1{
-    height: 450px;
-    border: 5px solid #FF7700;
     background-color: #FF7700;
-    box-shadow: 5px 5px #2a255069;
-    border-radius: 10px;
-    height: 550px;
+    box-shadow: 0.313rem 0.313rem #2a255069;
+    border-radius: .625rem;
+    height: 34.375rem;
 }
 #con2{
-    height: 450px;
-    border: 5px solid #FF7700;
+    border: 0.313rem solid #FF7700;
     background-color: #FF7700;
-    box-shadow: 5px 5px #2a255069;
-    border-radius: 10px;
-    height: 350px;
+    box-shadow: 0.313rem 0.313rem #2a255069;
+    border-radius: .625rem;
+    height: 21.875;
 }
 
 .styleDiv{
     background: #2a25505e;
-    border: #251D3A 1px solid;
-    border-radius: 10px;
+    border: #251D3A 0.063rem solid;
+    border-radius: .625rem;
 }
 
 .col div{
-    padding: 10px 0;
-    margin: 10px 0;
+    padding: .625rem 0;
+    margin: .625rem 0;
 }
 .container input{
-    width: 300px;
+    width: 18.75rem;
     align-items: center;
-    margin: 10px;
+    margin: .625rem;
 }
 
 #btn, #btn2{
-    width: 100px;
-    height: 40px;
+    width: 6.25rem;
+    height: 2.5rem;
     background: #251d3aab;
     color: white;
     border-color: beb9cb;
@@ -53,23 +50,28 @@ section{
 
 #btn:hover, #btn2:hover{
     background: #251d3a7d;
-    width: 110px;
-    height: 45px;
-    font-size: 1.6;
+    width: 6.875rem;
+    height: 2.813;
+    font-size: 1.075em;
 }
 
 h4{
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
 #output{
     color: #30244efc;
-    margin-top: 50px;
+    margin-top: 3.125rem;
     height: 7em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    /* border: 2px solid red; */
+}
+
+#error{
+    margin-top: 3.5rem;
+    width: 50%;
+    border-radius: .625rem;
 }
